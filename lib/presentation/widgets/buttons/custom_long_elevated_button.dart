@@ -17,7 +17,7 @@ class CustomLongElevatedButton extends StatelessWidget {
         foregroundColor: context.blackColor,
         backgroundColor: context.whiteColor,
         shape: RoundedRectangleBorder(borderRadius: context.borderRadiusHigh),
-        minimumSize: const Size(275, 48),
+        // minimumSize: const Size(275, 48),
       ),
       focusNode: FocusNode(),
       onPressed: callbackAction,

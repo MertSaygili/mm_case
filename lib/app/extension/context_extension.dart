@@ -53,6 +53,7 @@ extension ContextExtension on BuildContext {
   // ignore: use_named_constants
   EdgeInsets get paddingZero => const EdgeInsets.all(0);
   EdgeInsets get paddingPage => const EdgeInsets.all(24);
+  EdgeInsets get paddingCard => const EdgeInsets.symmetric(horizontal: 24, vertical: 16);
   EdgeInsets get paddingHorizontalPage => const EdgeInsets.symmetric(vertical: 8, horizontal: 12);
   EdgeInsets get paddingLeftLow => const EdgeInsets.only(left: 4);
   EdgeInsets get paddingLeftNormal => const EdgeInsets.only(left: 8);
@@ -75,7 +76,7 @@ extension ContextExtension on BuildContext {
 
   // border radius
   BorderRadius get borderRadiusLow => const BorderRadius.all(Radius.circular(4));
-  BorderRadius get borderRadiusMedium => const BorderRadius.all(Radius.circular(8));
+  BorderRadius get borderRadiusMedium => const BorderRadius.all(Radius.circular(12));
   BorderRadius get borderRadiusHigh => const BorderRadius.all(Radius.circular(16));
 
   // empty box column

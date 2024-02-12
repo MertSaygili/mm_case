@@ -32,7 +32,7 @@ final class AppRouter {
       GoRoute(
         name: AppRouterAttributes.inspirationPageName,
         path: AppRouterAttributes.inspirationPagePath,
-        pageBuilder: (context, state) => _buildPageWithSlideTransition(context: context, state: state, child: const InspirationScreen()),
+        pageBuilder: (context, state) => _buildPageWithSlideTransition(context: context, state: state, child: InspirationScreen()),
       ),
     ],
   );

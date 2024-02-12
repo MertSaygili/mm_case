@@ -1,9 +1,11 @@
 class InspirationWordModel {
-  final String? message;
+  final String? firstMessage;
+  final String? secondMessage;
   final bool? isFavorite;
 
   InspirationWordModel({
-    required this.message,
+    required this.firstMessage,
+    required this.secondMessage,
     required this.isFavorite,
   });
 }

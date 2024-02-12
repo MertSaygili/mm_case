@@ -7,15 +7,20 @@ class RowButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        CustomLongElevatedButton(callbackAction: () {}, text: AppStrings.dayLuckyCount),
-        CustomIconButton(
-          icon: AppIcons.editIcon,
-          onPressed: () {},
-          backgroundColor: context.whiteColor,
-          iconSize: context.iconSizeMedium,
-          buttonSize: context.radiusButtonSizeHigh,
+        Expanded(flex: 4, child: CustomLongElevatedButton(callbackAction: () {}, text: AppStrings.dayLuckyCount)),
+        Expanded(
+          flex: 1,
+          child: Align(
+            alignment: Alignment.centerRight,
+            child: CustomIconButton(
+              icon: AppIcons.editIcon,
+              onPressed: () {},
+              backgroundColor: context.whiteColor,
+              iconSize: context.iconSizeMedium,
+              buttonSize: context.radiusButtonSizeHigh,
+            ),
+          ),
         )
       ],
     );

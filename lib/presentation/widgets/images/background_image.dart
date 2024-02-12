@@ -11,7 +11,8 @@ class BackgroundImage extends StatelessWidget {
       AppAssets.backgroundImagePath,
       width: context.width,
       height: context.height,
-      fit: BoxFit.fill,
+      fit: BoxFit.cover,
+      opacity: const AlwaysStoppedAnimation(0.4),
     );
   }
 }
