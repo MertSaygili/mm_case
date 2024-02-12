@@ -5,13 +5,10 @@ class MenuButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(6),
-      child: CustomIconButton(
-        icon: AppIcons.tileIcon,
-        onPressed: () {},
-        buttonSize: context.radiusButtonSizeMedium,
-      ),
+    return CustomIconButton(
+      icon: AppIcons.tileIcon,
+      onPressed: () {},
+      buttonSize: context.radiusButtonSizeMedium,
     );
   }
 }

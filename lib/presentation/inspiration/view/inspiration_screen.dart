@@ -4,11 +4,12 @@ import 'package:mm_case/app/constants/app_strings.dart';
 import 'package:mm_case/app/extension/context_extension.dart';
 import 'package:mm_case/presentation/widgets/appbar/custom_appbar.dart';
 import 'package:mm_case/presentation/widgets/buttons/custom_appbar_back_button.dart';
-import 'package:mm_case/presentation/widgets/buttons/custom_elevated_button.dart';
 import 'package:mm_case/presentation/widgets/buttons/custom_icon_button.dart';
+import 'package:mm_case/presentation/widgets/buttons/custom_long_elevated_button.dart';
 import 'package:mm_case/presentation/widgets/images/background_image.dart';
 
 part './widgets/menu_button.dart';
+part './widgets/row_buttons.dart';
 
 class InspirationScreen extends StatelessWidget {
   const InspirationScreen({super.key});
@@ -25,10 +26,13 @@ class InspirationScreen extends StatelessWidget {
             leading: CustomAppbarBackButton(),
             actions: [MenuButton()],
           ),
-          body: Column(
-            children: [
-              CustomLongElevatedButton(callbackAction: () {}, text: AppStrings.dayLuckyCount),
-            ],
+          body: Padding(
+            padding: context.paddingPage,
+            child: const Column(
+              children: [
+                RowButtons(),
+              ],
+            ),
           ),
         ),
       ],

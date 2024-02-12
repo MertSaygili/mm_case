@@ -11,13 +11,10 @@ class CustomAppbarBackButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(6),
-      child: CustomIconButton(
-        icon: AppIcons.goBackIcon,
-        onPressed: () => backAction ?? context.pop(),
-        buttonSize: context.radiusButtonSizeMedium,
-      ),
+    return CustomIconButton(
+      icon: AppIcons.goBackIcon,
+      onPressed: () => backAction ?? context.pop(),
+      buttonSize: context.radiusButtonSizeMedium,
     );
   }
 }

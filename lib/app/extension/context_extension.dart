@@ -122,4 +122,5 @@ extension ContextExtension on BuildContext {
   // radius
   double get logoRadius => 100;
   double get radiusButtonSizeMedium => 32;
+  double get radiusButtonSizeHigh => 48;
 }
