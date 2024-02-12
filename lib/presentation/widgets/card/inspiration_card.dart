@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mm_case/app/constants/app_icons.dart';
+import 'package:mm_case/app/constants/app_strings.dart';
 import 'package:mm_case/app/extension/context_extension.dart';
 import 'package:mm_case/app/extension/date_extension.dart';
 import 'package:mm_case/app/models/inspiration_word_model.dart';
@@ -91,7 +92,7 @@ class _NameDateTitle extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              '${usermodel.username},',
+              '${AppStrings.dear} ${usermodel.username},',
               style: context.titleLarge.copyWith(color: context.whiteColor, fontSize: context.fontSize20, fontWeight: FontWeight.w600),
             ),
             Text(
