@@ -1,9 +1,7 @@
 part of '../inspiration_screen.dart';
 
 class InspirationPageBuilder extends StatelessWidget {
-  InspirationPageBuilder({super.key});
-
-  final UserModel userModel = UserModel(id: 0, username: 'Faik');
+  const InspirationPageBuilder({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +17,7 @@ class InspirationPageBuilder extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 InspirationCard(
-                  usermodel: userModel,
+                  usermodel: context.read<InspirationCubit>().getUserModel,
                   inspirationWordModel: state.inspirationItems[index],
                   downloadFunction: () {},
                   favoriteFunction: context.read<InspirationCubit>().changeFavorite,

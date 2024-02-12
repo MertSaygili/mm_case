@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mm_case/app/constants/app_icons.dart';
 import 'package:mm_case/app/constants/app_strings.dart';
 import 'package:mm_case/app/extension/context_extension.dart';
-import 'package:mm_case/app/models/user_model.dart';
 import 'package:mm_case/presentation/inspiration/view_model/cubit/inspiration_cubit.dart';
 import 'package:mm_case/presentation/inspiration/view_model/states/inspiration_states.dart';
 import 'package:mm_case/presentation/widgets/appbar/custom_appbar.dart';
@@ -45,7 +44,7 @@ class _Body extends StatelessWidget {
             leading: CustomAppbarBackButton(),
             actions: [MenuButton()],
           ),
-          body: Padding(padding: context.paddingPage, child: InspirationPageBuilder()),
+          body: Padding(padding: context.paddingPage, child: const InspirationPageBuilder()),
         ),
       ],
     );

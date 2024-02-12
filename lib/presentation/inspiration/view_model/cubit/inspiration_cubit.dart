@@ -33,10 +33,12 @@ class InspirationCubit extends BaseCubit<InspirationState> {
       ),
     );
   }
+
+  UserModel get getUserModel => _DummyData.userModel;
 }
 
 final class _DummyData {
-  final UserModel userModel = const UserModel(id: 0, username: 'Faik');
+  static UserModel userModel = const UserModel(id: 0, username: 'Faik');
 
   static List<InspirationWordModel> models = [
     const InspirationWordModel(
