@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mm_case/app/constants/app_icons.dart';
 import 'package:mm_case/app/extension/context_extension.dart';
 import 'package:mm_case/app/extension/date_extension.dart';
 import 'package:mm_case/app/models/inspiration_word_model.dart';
@@ -20,16 +21,14 @@ class InspirationCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Card(
-        color: context.whiteColor.withOpacity(0.24),
-        shape: RoundedRectangleBorder(borderRadius: context.borderRadiusMedium),
-        child: ListTile(
-          contentPadding: context.paddingCard,
-          title: _NameDateTitle(usermodel: usermodel),
-          subtitleTextStyle: context.bodyMedium.copyWith(color: context.whiteColor, fontSize: context.fontSize16),
-          subtitle: _Content(inspirationWordModel: inspirationWordModel),
-        ),
+    return Card(
+      color: context.whiteColor.withOpacity(0.24),
+      shape: RoundedRectangleBorder(borderRadius: context.borderRadiusMedium),
+      child: ListTile(
+        contentPadding: context.paddingCard,
+        title: _NameDateTitle(usermodel: usermodel),
+        subtitleTextStyle: context.bodyMedium.copyWith(color: context.whiteColor, fontSize: context.fontSize16),
+        subtitle: _Content(inspirationWordModel: inspirationWordModel),
       ),
     );
   }
@@ -46,9 +45,14 @@ class _Content extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('${inspirationWordModel.firstMessage}\n\n${inspirationWordModel.secondMessage}'),
+        SingleChildScrollView(child: Text('${inspirationWordModel.message}')),
         context.emptyBoxLowVertical,
-        Icon(Icons.favorite_border_outlined, color: context.whiteColor),
+        InkWell(
+          child: Icon(
+            inspirationWordModel.isFavorite == true ? AppIcons.favoriteFill : AppIcons.favoriteOutline,
+            color: inspirationWordModel.isFavorite == true ? context.errorColor : context.whiteColor,
+          ),
+        ),
         context.emptyBoxLowVertical,
         InkWell(
           onTap: () {},
@@ -56,7 +60,7 @@ class _Content extends StatelessWidget {
             width: context.width,
             height: 48,
             child: Icon(
-              Icons.download,
+              AppIcons.download,
               color: context.whiteColor,
             ),
           ),
