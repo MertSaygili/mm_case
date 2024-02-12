@@ -28,16 +28,20 @@ class InspirationCard extends StatelessWidget {
         contentPadding: context.paddingCard,
         title: _NameDateTitle(usermodel: usermodel),
         subtitleTextStyle: context.bodyMedium.copyWith(color: context.whiteColor, fontSize: context.fontSize16),
-        subtitle: _Content(inspirationWordModel: inspirationWordModel),
+        subtitle: _Content(inspirationWordModel: inspirationWordModel, favoriteFunction: favoriteFunction),
       ),
     );
   }
 }
 
 class _Content extends StatelessWidget {
-  const _Content({required this.inspirationWordModel});
+  const _Content({required this.inspirationWordModel, required this.favoriteFunction});
 
   final InspirationWordModel inspirationWordModel;
+  final Function favoriteFunction;
+
+  final double _minTextConstraint = 200;
+  final double _maxTextConstraint = 400;
 
   @override
   Widget build(BuildContext context) {
@@ -45,9 +49,13 @@ class _Content extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SingleChildScrollView(child: Text('${inspirationWordModel.message}')),
+        Container(
+          constraints: BoxConstraints(minHeight: _minTextConstraint, maxHeight: _maxTextConstraint),
+          child: SingleChildScrollView(child: Text('${inspirationWordModel.message}')),
+        ),
         context.emptyBoxLowVertical,
         InkWell(
+          onTap: () => favoriteFunction(inspirationWordModel.id),
           child: Icon(
             inspirationWordModel.isFavorite == true ? AppIcons.favoriteFill : AppIcons.favoriteOutline,
             color: inspirationWordModel.isFavorite == true ? context.errorColor : context.whiteColor,

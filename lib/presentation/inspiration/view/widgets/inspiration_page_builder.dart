@@ -16,6 +16,7 @@ class InspirationPageBuilder extends StatelessWidget {
           itemCount: state.inspirationItems.length,
           itemBuilder: (context, index) {
             return Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 InspirationCard(
                   usermodel: userModel,
@@ -23,7 +24,6 @@ class InspirationPageBuilder extends StatelessWidget {
                   downloadFunction: () {},
                   favoriteFunction: context.read<InspirationCubit>().changeFavorite,
                 ),
-                const Spacer(),
                 const RowButtons(),
               ],
             );
