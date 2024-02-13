@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+//* App Strings
+//* Use this class to get the strings of the app
+
 @immutable
 final class AppStrings {
   const AppStrings._();

@@ -1,5 +1,7 @@
 import 'package:equatable/equatable.dart';
 
+//* User model
+
 class UserModel extends Equatable {
   final int id;
   final String? username;

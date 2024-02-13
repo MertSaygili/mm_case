@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+//* App Icons
+//* Use this class to get app icons
+
 @immutable
 final class AppIcons {
   static const IconData goBackIcon = Icons.chevron_left;

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mm_case/app/extension/context_extension.dart';
 
+//* Long elevated button
+
 class CustomLongElevatedButton extends StatelessWidget {
   const CustomLongElevatedButton({required this.callbackAction, required this.text, super.key, this.iconData, this.iconColor, this.textColor});
 
@@ -17,7 +19,6 @@ class CustomLongElevatedButton extends StatelessWidget {
         foregroundColor: context.blackColor,
         backgroundColor: context.whiteColor,
         shape: RoundedRectangleBorder(borderRadius: context.borderRadiusHigh),
-        // minimumSize: const Size(275, 48),
       ),
       focusNode: FocusNode(),
       onPressed: callbackAction,

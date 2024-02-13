@@ -6,6 +6,8 @@ import 'package:mm_case/app/extension/date_extension.dart';
 import 'package:mm_case/app/models/inspiration_word_model.dart';
 import 'package:mm_case/app/models/user_model.dart';
 
+//* Inspiration Card, for inspiration page
+
 class InspirationCard extends StatelessWidget {
   const InspirationCard({
     super.key,

@@ -1,5 +1,7 @@
 part of '../inspiration_screen.dart';
 
+// Row buttons, used in under the screen, elevated button and icon button
+
 class RowButtons extends StatelessWidget {
   const RowButtons({super.key});
 

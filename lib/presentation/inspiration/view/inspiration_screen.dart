@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mm_case/app/constants/app_assets.dart';
 import 'package:mm_case/app/constants/app_icons.dart';
 import 'package:mm_case/app/constants/app_strings.dart';
 import 'package:mm_case/app/extension/context_extension.dart';
@@ -36,7 +37,7 @@ class _Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        const BackgroundImage(),
+        const BackgroundImage(imagePath: AppAssets.backgroundImagePath),
         Scaffold(
           backgroundColor: context.transparentColor,
           appBar: const CustomAppbar(

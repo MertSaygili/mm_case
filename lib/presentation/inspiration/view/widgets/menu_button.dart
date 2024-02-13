@@ -1,5 +1,7 @@
 part of '../inspiration_screen.dart';
 
+//* Menu Button
+
 class MenuButton extends StatelessWidget {
   const MenuButton({super.key});
 

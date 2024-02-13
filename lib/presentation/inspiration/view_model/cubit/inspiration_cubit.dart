@@ -11,6 +11,7 @@ class InspirationCubit extends BaseCubit<InspirationState> {
 
   final BuildContext screenContext;
 
+  //* Dummy fetch data
   Future<void> _fetchData() async {
     emit(state.copyWith(isLoading: true));
 
@@ -22,6 +23,7 @@ class InspirationCubit extends BaseCubit<InspirationState> {
     );
   }
 
+  //* change favorite of inspiration model
   void changeFavorite(int inspirationId) {
     emit(
       state.copyWith(
@@ -34,9 +36,11 @@ class InspirationCubit extends BaseCubit<InspirationState> {
     );
   }
 
+  // returns user model
   UserModel get getUserModel => _DummyData.userModel;
 }
 
+//* DUMMY DATA
 final class _DummyData {
   static UserModel userModel = const UserModel(id: 0, username: 'Faik');
 

@@ -10,6 +10,7 @@ class InspirationState extends Equatable {
   final bool isLoading;
   final List<InspirationWordModel> inspirationItems;
 
+  //* Copy with
   InspirationState copyWith({bool? isLoading, List<InspirationWordModel>? inspirationItems}) {
     return InspirationState(
       isLoading: isLoading ?? false,
@@ -17,6 +18,7 @@ class InspirationState extends Equatable {
     );
   }
 
+  //* Get props
   @override
   List<Object?> get props => [
         isLoading,

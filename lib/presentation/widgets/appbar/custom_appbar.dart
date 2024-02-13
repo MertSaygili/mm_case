@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mm_case/app/extension/context_extension.dart';
 
+//* Customazible Appbar
+
 class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppbar({this.centerTitle, super.key, this.title, this.actions, this.leading, this.backgroundColor});
 

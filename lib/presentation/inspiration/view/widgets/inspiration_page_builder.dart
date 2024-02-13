@@ -1,5 +1,7 @@
 part of '../inspiration_screen.dart';
 
+// Page view builder for inspiration screen
+
 class InspirationPageBuilder extends StatelessWidget {
   const InspirationPageBuilder({super.key});
 

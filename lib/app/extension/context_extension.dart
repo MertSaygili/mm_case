@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+//** Build Context Extension
+
+//* Helper class for app, to use the context easily
+
 extension ContextExtension on BuildContext {
   // default text style
   TextStyle get _defaultTextStyle => const TextStyle();
@@ -50,29 +54,8 @@ extension ContextExtension on BuildContext {
   Color get transparentColor => Colors.transparent;
 
   // padding
-  // ignore: use_named_constants
-  EdgeInsets get paddingZero => const EdgeInsets.all(0);
   EdgeInsets get paddingPage => const EdgeInsets.all(24);
   EdgeInsets get paddingCard => const EdgeInsets.symmetric(horizontal: 24, vertical: 16);
-  EdgeInsets get paddingHorizontalPage => const EdgeInsets.symmetric(vertical: 8, horizontal: 12);
-  EdgeInsets get paddingLeftLow => const EdgeInsets.only(left: 4);
-  EdgeInsets get paddingLeftNormal => const EdgeInsets.only(left: 8);
-  EdgeInsets get paddingLeftHigh => const EdgeInsets.only(left: 12);
-  EdgeInsets get paddingRightLow => const EdgeInsets.only(right: 4);
-  EdgeInsets get paddingRightNormal => const EdgeInsets.only(right: 8);
-  EdgeInsets get paddingRightHigh => const EdgeInsets.only(right: 12);
-  EdgeInsets get paddingHorizontalLeftNormalRightLow => const EdgeInsets.only(left: 8, right: 4);
-  EdgeInsets get paddingHorizontalLeftLowRightHigh => const EdgeInsets.only(left: 4, right: 12);
-  EdgeInsets get paddingLow => const EdgeInsets.all(4);
-  EdgeInsets get paddingMedium => const EdgeInsets.all(8);
-  EdgeInsets get paddingMediumX => const EdgeInsets.all(12);
-  EdgeInsets get paddingHigh => const EdgeInsets.all(16);
-  EdgeInsets get paddingBottom => const EdgeInsets.symmetric(vertical: 32);
-
-  // gap padding
-  double get gapPaddingVeryLow => 2;
-  double get gapPaddingLow => 4;
-  double get gapPaddingNormal => 8;
 
   // border radius
   BorderRadius get borderRadiusLow => const BorderRadius.all(Radius.circular(4));
@@ -80,10 +63,7 @@ extension ContextExtension on BuildContext {
   BorderRadius get borderRadiusHigh => const BorderRadius.all(Radius.circular(16));
 
   // empty box column
-  SizedBox get emptyBoxLowLowVertical => SizedBox(height: height * 0.01);
   SizedBox get emptyBoxLowVertical => SizedBox(height: height * 0.02);
-  SizedBox get emptyBoxMediumVertical => SizedBox(height: height * 0.04);
-  SizedBox get emptyBoxLargeVertical => SizedBox(height: height * 0.06);
 
   // empty box row
   SizedBox get emptyBoxLowHorizontal => SizedBox(width: width * 0.02);

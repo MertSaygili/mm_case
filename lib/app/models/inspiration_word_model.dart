@@ -1,5 +1,7 @@
 import 'package:equatable/equatable.dart';
 
+//* Inspiration Model
+
 class InspirationWordModel extends Equatable {
   final int? id;
   final String? message;

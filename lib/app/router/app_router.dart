@@ -5,6 +5,8 @@ import 'package:go_router/go_router.dart';
 import 'package:mm_case/app/router/app_router_attributes.dart';
 import 'package:mm_case/presentation/inspiration/view/inspiration_screen.dart';
 
+//* Router Class
+
 @immutable
 final class AppRouter {
   const AppRouter._();
@@ -32,7 +34,7 @@ final class AppRouter {
       GoRoute(
         name: AppRouterAttributes.inspirationPageName,
         path: AppRouterAttributes.inspirationPagePath,
-        pageBuilder: (context, state) => _buildPageWithSlideTransition(context: context, state: state, child: InspirationScreen()),
+        pageBuilder: (context, state) => _buildPageWithSlideTransition(context: context, state: state, child: const InspirationScreen()),
       ),
     ],
   );

@@ -4,6 +4,8 @@ import 'package:mm_case/app/constants/app_icons.dart';
 import 'package:mm_case/app/extension/context_extension.dart';
 import 'package:mm_case/presentation/widgets/buttons/custom_icon_button.dart';
 
+//* Back button, for appbar
+
 class CustomAppbarBackButton extends StatelessWidget {
   const CustomAppbarBackButton({super.key, this.backAction});
 
