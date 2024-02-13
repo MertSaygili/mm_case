@@ -4,6 +4,7 @@ import 'package:mm_case/app/constants/app_assets.dart';
 import 'package:mm_case/app/constants/app_icons.dart';
 import 'package:mm_case/app/constants/app_strings.dart';
 import 'package:mm_case/app/extension/context_extension.dart';
+import 'package:mm_case/presentation/inspiration/view/widgets/menu_button.dart';
 import 'package:mm_case/presentation/inspiration/view_model/cubit/inspiration_cubit.dart';
 import 'package:mm_case/presentation/inspiration/view_model/states/inspiration_states.dart';
 import 'package:mm_case/presentation/widgets/appbar/custom_appbar.dart';
@@ -13,8 +14,8 @@ import 'package:mm_case/presentation/widgets/buttons/custom_long_elevated_button
 import 'package:mm_case/presentation/widgets/card/inspiration_card.dart';
 import 'package:mm_case/presentation/widgets/images/background_image.dart';
 
+part './widgets/expanded_menu_items.dart';
 part './widgets/inspiration_page_builder.dart';
-part './widgets/menu_button.dart';
 part './widgets/row_buttons.dart';
 
 class InspirationScreen extends StatelessWidget {
@@ -45,7 +46,12 @@ class _Body extends StatelessWidget {
             leading: CustomAppbarBackButton(),
             actions: [MenuButton()],
           ),
-          body: Padding(padding: context.paddingPage, child: const InspirationPageBuilder()),
+          body: Stack(
+            children: [
+              Padding(padding: context.paddingPage, child: const InspirationPageBuilder()),
+              const ExpandedMenuItems(),
+            ],
+          ),
         ),
       ],
     );

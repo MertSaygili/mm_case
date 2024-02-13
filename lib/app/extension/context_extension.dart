@@ -64,6 +64,7 @@ extension ContextExtension on BuildContext {
 
   // empty box column
   SizedBox get emptyBoxLowVertical => SizedBox(height: height * 0.02);
+  SizedBox get emptyBoxLowLowVertical => SizedBox(height: height * 0.005);
 
   // empty box row
   SizedBox get emptyBoxLowHorizontal => SizedBox(width: width * 0.02);
@@ -104,4 +105,9 @@ extension ContextExtension on BuildContext {
   double get logoRadius => 100;
   double get radiusButtonSizeMedium => 32;
   double get radiusButtonSizeHigh => 48;
+
+  // duration
+  Duration get durationLow => const Duration(milliseconds: 200);
+  Duration get durationNormal => const Duration(milliseconds: 400);
+  Duration get durationHigh => const Duration(milliseconds: 600);
 }

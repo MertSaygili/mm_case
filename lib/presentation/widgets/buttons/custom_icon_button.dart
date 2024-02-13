@@ -28,7 +28,7 @@ class CustomIconButton extends StatelessWidget {
       width: buttonSize,
       decoration: BoxDecoration(shape: BoxShape.circle, color: context.whiteColor),
       child: InkWell(
-        onTap: () {},
+        onTap: onPressed,
         borderRadius: context.borderRadiusLow,
         child: CircleAvatar(
           backgroundColor: backgroundColor ?? context.whiteColor,

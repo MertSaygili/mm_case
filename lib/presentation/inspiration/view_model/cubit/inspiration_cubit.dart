@@ -11,17 +11,8 @@ class InspirationCubit extends BaseCubit<InspirationState> {
 
   final BuildContext screenContext;
 
-  //* Dummy fetch data
-  Future<void> _fetchData() async {
-    emit(state.copyWith(isLoading: true));
-
-    await Future.delayed(
-      const Duration(seconds: 0),
-      () {
-        emit(state.copyWith(isLoading: false, inspirationItems: _DummyData.models));
-      },
-    );
-  }
+  // returns user model
+  UserModel get getUserModel => _DummyData.userModel;
 
   //* change favorite of inspiration model
   void changeFavorite(int inspirationId) {
@@ -36,8 +27,21 @@ class InspirationCubit extends BaseCubit<InspirationState> {
     );
   }
 
-  // returns user model
-  UserModel get getUserModel => _DummyData.userModel;
+  void changeMenuExpanded() {
+    emit(state.copyWith(isMenuExpanded: !state.isMenuExpanded, isLoading: false, inspirationItems: state.inspirationItems));
+  }
+
+  //* Dummy fetch data
+  Future<void> _fetchData() async {
+    emit(state.copyWith(isLoading: true));
+
+    await Future.delayed(
+      const Duration(seconds: 0),
+      () {
+        emit(state.copyWith(isLoading: false, inspirationItems: _DummyData.models));
+      },
+    );
+  }
 }
 
 //* DUMMY DATA
